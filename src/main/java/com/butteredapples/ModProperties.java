@@ -1,16 +1,13 @@
 package com.butteredapples;
 
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
-
-import java.util.List;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
 
 public class ModProperties {
 
-    //Enchanted books
-    public static final BooleanProperty ENCHANTED_SLOT_0_OCCUPIED = BooleanProperty.create("enchanted_slot_0");
-    public static final BooleanProperty ENCHANTED_SLOT_1_OCCUPIED = BooleanProperty.create("enchanted_slot_1");
-    public static final BooleanProperty ENCHANTED_SLOT_2_OCCUPIED = BooleanProperty.create("enchanted_slot_2");
-    public static final BooleanProperty ENCHANTED_SLOT_3_OCCUPIED = BooleanProperty.create("enchanted_slot_3");
-    public static final BooleanProperty ENCHANTED_SLOT_4_OCCUPIED = BooleanProperty.create("enchanted_slot_4");
-    public static final BooleanProperty ENCHANTED_SLOT_5_OCCUPIED = BooleanProperty.create("enchanted_slot_5");
+    public static final EnumProperty<BookEnum> BOOK_TYPE_SLOT_0 = EnumProperty.create("book_type_0", BookEnum.class);
+    public static final EnumProperty<BookEnum> BOOK_TYPE_SLOT_1 = EnumProperty.create("book_type_1", BookEnum.class);
+    public static final EnumProperty<BookEnum> BOOK_TYPE_SLOT_2 = EnumProperty.create("book_type_2", BookEnum.class);
+    public static final EnumProperty<BookEnum> BOOK_TYPE_SLOT_3 = EnumProperty.create("book_type_3", BookEnum.class);
+    public static final EnumProperty<BookEnum> BOOK_TYPE_SLOT_4 = EnumProperty.create("book_type_4", BookEnum.class);
+    public static final EnumProperty<BookEnum> BOOK_TYPE_SLOT_5 = EnumProperty.create("book_type_5", BookEnum.class);
 }
