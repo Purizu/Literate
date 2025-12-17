@@ -1,1196 +1,153 @@
 {
   "multipart": [
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf",
-        "uvlock": true,
-        "y": 90
-      },
-      "when": {
-        "facing": "east"
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_occupied_slot_top_right",
-        "y": 90
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "east"
-          },
-          {
-            "book_type_0": "normal"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_top_right",
-        "y": 90
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "east"
-          },
-          {
-            "book_type_0": "enchanted"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_empty_slot_top_right",
-        "y": 90
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "east"
-          },
-          {
-            "book_type_0": "empty"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_occupied_slot_top_mid",
-        "y": 90
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "east"
-          },
-          {
-            "book_type_1": "normal"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_top_mid",
-        "y": 90
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "east"
-          },
-          {
-            "book_type_1": "enchanted"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_empty_slot_top_mid",
-        "y": 90
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "east"
-          },
-          {
-            "book_type_1": "empty"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_occupied_slot_top_left",
-        "y": 90
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "east"
-          },
-          {
-            "book_type_2": "normal"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_top_left",
-        "y": 90
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "east"
-          },
-          {
-            "book_type_2": "enchanted"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_empty_slot_top_left",
-        "y": 90
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "east"
-          },
-          {
-            "book_type_2": "empty"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_occupied_slot_bottom_left",
-        "y": 90
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "east"
-          },
-          {
-            "book_type_3": "normal"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_bottom_left",
-        "y": 90
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "east"
-          },
-          {
-            "book_type_3": "enchanted"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_empty_slot_bottom_left",
-        "y": 90
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "east"
-          },
-          {
-            "book_type_3": "empty"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_occupied_slot_bottom_mid",
-        "y": 90
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "east"
-          },
-          {
-            "book_type_4": "normal"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_bottom_mid",
-        "y": 90
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "east"
-          },
-          {
-            "book_type_4": "enchanted"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_empty_slot_bottom_mid",
-        "y": 90
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "east"
-          },
-          {
-            "book_type_4": "empty"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_occupied_slot_bottom_right",
-        "y": 90
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "east"
-          },
-          {
-            "book_type_5": "normal"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_bottom_right",
-        "y": 90
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "east"
-          },
-          {
-            "book_type_5": "enchanted"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_empty_slot_bottom_right",
-        "y": 90
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "east"
-          },
-          {
-            "book_type_5": "empty"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf",
-        "uvlock": true,
-        "y": 270
-      },
-      "when": {
-        "facing": "west"
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_occupied_slot_top_right",
-        "y": 270
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "west"
-          },
-          {
-            "book_type_0": "normal"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_top_right",
-        "y": 270
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "west"
-          },
-          {
-            "book_type_0": "enchanted"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_empty_slot_top_right",
-        "y": 270
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "west"
-          },
-          {
-            "book_type_0": "empty"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_occupied_slot_top_mid",
-        "y": 270
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "west"
-          },
-          {
-            "book_type_1": "normal"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_top_mid",
-        "y": 270
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "west"
-          },
-          {
-            "book_type_1": "enchanted"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_empty_slot_top_mid",
-        "y": 270
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "west"
-          },
-          {
-            "book_type_1": "empty"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_occupied_slot_top_left",
-        "y": 270
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "west"
-          },
-          {
-            "book_type_2": "normal"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_top_left",
-        "y": 270
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "west"
-          },
-          {
-            "book_type_2": "enchanted"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_empty_slot_top_left",
-        "y": 270
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "west"
-          },
-          {
-            "book_type_2": "empty"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_occupied_slot_bottom_left",
-        "y": 270
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "west"
-          },
-          {
-            "book_type_3": "normal"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_bottom_left",
-        "y": 270
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "west"
-          },
-          {
-            "book_type_3": "enchanted"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_empty_slot_bottom_left",
-        "y": 270
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "west"
-          },
-          {
-            "book_type_3": "empty"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_occupied_slot_bottom_mid",
-        "y": 270
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "west"
-          },
-          {
-            "book_type_4": "normal"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_bottom_mid",
-        "y": 270
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "west"
-          },
-          {
-            "book_type_4": "enchanted"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_empty_slot_bottom_mid",
-        "y": 270
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "west"
-          },
-          {
-            "book_type_4": "empty"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_occupied_slot_bottom_right",
-        "y": 270
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "west"
-          },
-          {
-            "book_type_5": "normal"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_bottom_right",
-        "y": 270
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "west"
-          },
-          {
-            "book_type_5": "enchanted"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_empty_slot_bottom_right",
-        "y": 270
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "west"
-          },
-          {
-            "book_type_5": "empty"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf",
-        "uvlock": true,
-        "y": 180
-      },
-      "when": {
-        "facing": "south"
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_occupied_slot_top_right",
-        "y": 180
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "south"
-          },
-          {
-            "book_type_0": "normal"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_top_right",
-        "y": 180
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "south"
-          },
-          {
-            "book_type_0": "enchanted"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_empty_slot_top_right",
-        "y": 180
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "south"
-          },
-          {
-            "book_type_0": "empty"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_occupied_slot_top_mid",
-        "y": 180
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "south"
-          },
-          {
-            "book_type_1": "normal"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_top_mid",
-        "y": 180
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "south"
-          },
-          {
-            "book_type_1": "enchanted"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_empty_slot_top_mid",
-        "y": 180
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "south"
-          },
-          {
-            "book_type_1": "empty"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_occupied_slot_top_left",
-        "y": 180
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "south"
-          },
-          {
-            "book_type_2": "normal"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_top_left",
-        "y": 180
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "south"
-          },
-          {
-            "book_type_2": "enchanted"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_empty_slot_top_left",
-        "y": 180
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "south"
-          },
-          {
-            "book_type_2": "empty"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_occupied_slot_bottom_left",
-        "y": 180
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "south"
-          },
-          {
-            "book_type_3": "normal"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_bottom_left",
-        "y": 180
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "south"
-          },
-          {
-            "book_type_3": "enchanted"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_empty_slot_bottom_left",
-        "y": 180
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "south"
-          },
-          {
-            "book_type_3": "empty"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_occupied_slot_bottom_mid",
-        "y": 180
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "south"
-          },
-          {
-            "book_type_4": "normal"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_bottom_mid",
-        "y": 180
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "south"
-          },
-          {
-            "book_type_4": "enchanted"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_empty_slot_bottom_mid",
-        "y": 180
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "south"
-          },
-          {
-            "book_type_4": "empty"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_occupied_slot_bottom_right",
-        "y": 180
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "south"
-          },
-          {
-            "book_type_5": "normal"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_bottom_right",
-        "y": 180
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "south"
-          },
-          {
-            "book_type_5": "enchanted"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_empty_slot_bottom_right",
-        "y": 180
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "south"
-          },
-          {
-            "book_type_5": "empty"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf",
-        "uvlock": true,
-        "y": 0
-      },
-      "when": {
-        "facing": "north"
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_occupied_slot_top_right",
-        "y": 0
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "north"
-          },
-          {
-            "book_type_0": "normal"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_top_right",
-        "y": 0
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "north"
-          },
-          {
-            "book_type_0": "enchanted"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_empty_slot_top_right",
-        "y": 0
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "north"
-          },
-          {
-            "book_type_0": "empty"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_occupied_slot_top_mid",
-        "y": 0
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "north"
-          },
-          {
-            "book_type_1": "normal"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_top_mid",
-        "y": 0
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "north"
-          },
-          {
-            "book_type_1": "enchanted"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_empty_slot_top_mid",
-        "y": 0
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "north"
-          },
-          {
-            "book_type_1": "empty"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_occupied_slot_top_left",
-        "y": 0
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "north"
-          },
-          {
-            "book_type_2": "normal"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_top_left",
-        "y": 0
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "north"
-          },
-          {
-            "book_type_2": "enchanted"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_empty_slot_top_left",
-        "y": 0
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "north"
-          },
-          {
-            "book_type_2": "empty"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_occupied_slot_bottom_left",
-        "y": 0
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "north"
-          },
-          {
-            "book_type_3": "normal"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_bottom_left",
-        "y": 0
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "north"
-          },
-          {
-            "book_type_3": "enchanted"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_empty_slot_bottom_left",
-        "y": 0
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "north"
-          },
-          {
-            "book_type_3": "empty"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_occupied_slot_bottom_mid",
-        "y": 0
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "north"
-          },
-          {
-            "book_type_4": "normal"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_bottom_mid",
-        "y": 0
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "north"
-          },
-          {
-            "book_type_4": "enchanted"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_empty_slot_bottom_mid",
-        "y": 0
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "north"
-          },
-          {
-            "book_type_4": "empty"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_occupied_slot_bottom_right",
-        "y": 0
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "north"
-          },
-          {
-            "book_type_5": "normal"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_bottom_right",
-        "y": 0
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "north"
-          },
-          {
-            "book_type_5": "enchanted"
-          }
-        ]
-      }
-    },
-    {
-      "apply": {
-        "model": "minecraft:block/chiseled_bookshelf_empty_slot_bottom_right",
-        "y": 0
-      },
-      "when": {
-        "AND": [
-          {
-            "facing": "north"
-          },
-          {
-            "book_type_5": "empty"
-          }
-        ]
-      }
-    }
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf", "uvlock": true, "y": 90 }, "when": { "facing": "east" } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf", "uvlock": true, "y": 270 }, "when": { "facing": "west" } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf", "uvlock": true, "y": 180 }, "when": { "facing": "south" } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf", "uvlock": true, "y": 0 }, "when": { "facing": "north" } },
+
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_occupied_slot_top_left", "y": 90 }, "when": { "AND": [{ "facing": "east" }, { "book_type_0": "normal" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_empty_slot_top_left", "y": 90 }, "when": { "AND": [{ "facing": "east" }, { "book_type_0": "empty" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_top_left", "y": 90 }, "when": { "AND": [{ "facing": "east" }, { "book_type_0": "enchanted" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_writeable_slot_top_left", "y": 90 }, "when": { "AND": [{ "facing": "east" }, { "book_type_0": "writeable" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_written_slot_top_left", "y": 90 }, "when": { "AND": [{ "facing": "east" }, { "book_type_0": "written" }] } },
+
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_occupied_slot_top_mid", "y": 90 }, "when": { "AND": [{ "facing": "east" }, { "book_type_1": "normal" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_empty_slot_top_mid", "y": 90 }, "when": { "AND": [{ "facing": "east" }, { "book_type_1": "empty" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_top_mid", "y": 90 }, "when": { "AND": [{ "facing": "east" }, { "book_type_1": "enchanted" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_writeable_slot_top_mid", "y": 90 }, "when": { "AND": [{ "facing": "east" }, { "book_type_1": "writeable" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_written_slot_top_mid", "y": 90 }, "when": { "AND": [{ "facing": "east" }, { "book_type_1": "written" }] } },
+
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_occupied_slot_top_right", "y": 90 }, "when": { "AND": [{ "facing": "east" }, { "book_type_2": "normal" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_empty_slot_top_right", "y": 90 }, "when": { "AND": [{ "facing": "east" }, { "book_type_2": "empty" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_top_right", "y": 90 }, "when": { "AND": [{ "facing": "east" }, { "book_type_2": "enchanted" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_writeable_slot_top_right", "y": 90 }, "when": { "AND": [{ "facing": "east" }, { "book_type_2": "writeable" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_written_slot_top_right", "y": 90 }, "when": { "AND": [{ "facing": "east" }, { "book_type_2": "written" }] } },
+
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_occupied_slot_bottom_left", "y": 90 }, "when": { "AND": [{ "facing": "east" }, { "book_type_3": "normal" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_empty_slot_bottom_left", "y": 90 }, "when": { "AND": [{ "facing": "east" }, { "book_type_3": "empty" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_bottom_left", "y": 90 }, "when": { "AND": [{ "facing": "east" }, { "book_type_3": "enchanted" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_writeable_slot_bottom_left", "y": 90 }, "when": { "AND": [{ "facing": "east" }, { "book_type_3": "writeable" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_written_slot_bottom_left", "y": 90 }, "when": { "AND": [{ "facing": "east" }, { "book_type_3": "written" }] } },
+
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_occupied_slot_bottom_mid", "y": 90 }, "when": { "AND": [{ "facing": "east" }, { "book_type_4": "normal" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_empty_slot_bottom_mid", "y": 90 }, "when": { "AND": [{ "facing": "east" }, { "book_type_4": "empty" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_bottom_mid", "y": 90 }, "when": { "AND": [{ "facing": "east" }, { "book_type_4": "enchanted" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_writeable_slot_bottom_mid", "y": 90 }, "when": { "AND": [{ "facing": "east" }, { "book_type_4": "writeable" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_written_slot_bottom_mid", "y": 90 }, "when": { "AND": [{ "facing": "east" }, { "book_type_4": "written" }] } },
+
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_occupied_slot_bottom_right", "y": 90 }, "when": { "AND": [{ "facing": "east" }, { "book_type_5": "normal" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_empty_slot_bottom_right", "y": 90 }, "when": { "AND": [{ "facing": "east" }, { "book_type_5": "empty" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_bottom_right", "y": 90 }, "when": { "AND": [{ "facing": "east" }, { "book_type_5": "enchanted" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_writeable_slot_bottom_right", "y": 90 }, "when": { "AND": [{ "facing": "east" }, { "book_type_5": "writeable" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_written_slot_bottom_right", "y": 90 }, "when": { "AND": [{ "facing": "east" }, { "book_type_5": "written" }] } },
+
+
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_occupied_slot_top_left", "y": 270 }, "when": { "AND": [{ "facing": "west" }, { "book_type_0": "normal" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_empty_slot_top_left", "y": 270 }, "when": { "AND": [{ "facing": "west" }, { "book_type_0": "empty" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_top_left", "y": 270 }, "when": { "AND": [{ "facing": "west" }, { "book_type_0": "enchanted" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_writeable_slot_top_left", "y": 270 }, "when": { "AND": [{ "facing": "west" }, { "book_type_0": "writeable" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_written_slot_top_left", "y": 270 }, "when": { "AND": [{ "facing": "west" }, { "book_type_0": "written" }] } },
+
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_occupied_slot_top_mid", "y": 270 }, "when": { "AND": [{ "facing": "west" }, { "book_type_1": "normal" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_empty_slot_top_mid", "y": 270 }, "when": { "AND": [{ "facing": "west" }, { "book_type_1": "empty" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_top_mid", "y": 270 }, "when": { "AND": [{ "facing": "west" }, { "book_type_1": "enchanted" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_writeable_slot_top_mid", "y": 270 }, "when": { "AND": [{ "facing": "west" }, { "book_type_1": "writeable" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_written_slot_top_mid", "y": 270 }, "when": { "AND": [{ "facing": "west" }, { "book_type_1": "written" }] } },
+
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_occupied_slot_top_right", "y": 270 }, "when": { "AND": [{ "facing": "west" }, { "book_type_2": "normal" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_empty_slot_top_right", "y": 270 }, "when": { "AND": [{ "facing": "west" }, { "book_type_2": "empty" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_top_right", "y": 270 }, "when": { "AND": [{ "facing": "west" }, { "book_type_2": "enchanted" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_writeable_slot_top_right", "y": 270 }, "when": { "AND": [{ "facing": "west" }, { "book_type_2": "writeable" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_written_slot_top_right", "y": 270 }, "when": { "AND": [{ "facing": "west" }, { "book_type_2": "written" }] } },
+
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_occupied_slot_bottom_left", "y": 270 }, "when": { "AND": [{ "facing": "west" }, { "book_type_3": "normal" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_empty_slot_bottom_left", "y": 270 }, "when": { "AND": [{ "facing": "west" }, { "book_type_3": "empty" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_bottom_left", "y": 270 }, "when": { "AND": [{ "facing": "west" }, { "book_type_3": "enchanted" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_writeable_slot_bottom_left", "y": 270 }, "when": { "AND": [{ "facing": "west" }, { "book_type_3": "writeable" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_written_slot_bottom_left", "y": 270 }, "when": { "AND": [{ "facing": "west" }, { "book_type_3": "written" }] } },
+
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_occupied_slot_bottom_mid", "y": 270 }, "when": { "AND": [{ "facing": "west" }, { "book_type_4": "normal" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_empty_slot_bottom_mid", "y": 270 }, "when": { "AND": [{ "facing": "west" }, { "book_type_4": "empty" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_bottom_mid", "y": 270 }, "when": { "AND": [{ "facing": "west" }, { "book_type_4": "enchanted" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_writeable_slot_bottom_mid", "y": 270 }, "when": { "AND": [{ "facing": "west" }, { "book_type_4": "writeable" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_written_slot_bottom_mid", "y": 270 }, "when": { "AND": [{ "facing": "west" }, { "book_type_4": "written" }] } },
+
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_occupied_slot_bottom_right", "y": 270 }, "when": { "AND": [{ "facing": "west" }, { "book_type_5": "normal" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_empty_slot_bottom_right", "y": 270 }, "when": { "AND": [{ "facing": "west" }, { "book_type_5": "empty" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_bottom_right", "y": 270 }, "when": { "AND": [{ "facing": "west" }, { "book_type_5": "enchanted" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_writeable_slot_bottom_right", "y": 270 }, "when": { "AND": [{ "facing": "west" }, { "book_type_5": "writeable" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_written_slot_bottom_right", "y": 270 }, "when": { "AND": [{ "facing": "west" }, { "book_type_5": "written" }] } },
+
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_occupied_slot_top_left", "y": 180 }, "when": { "AND": [{ "facing": "south" }, { "book_type_0": "normal" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_empty_slot_top_left", "y": 180 }, "when": { "AND": [{ "facing": "south" }, { "book_type_0": "empty" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_top_left", "y": 180 }, "when": { "AND": [{ "facing": "south" }, { "book_type_0": "enchanted" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_writeable_slot_top_left", "y": 180 }, "when": { "AND": [{ "facing": "south" }, { "book_type_0": "writeable" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_written_slot_top_left", "y": 180 }, "when": { "AND": [{ "facing": "south" }, { "book_type_0": "written" }] } },
+
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_occupied_slot_top_mid", "y": 180 }, "when": { "AND": [{ "facing": "south" }, { "book_type_1": "normal" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_empty_slot_top_mid", "y": 180 }, "when": { "AND": [{ "facing": "south" }, { "book_type_1": "empty" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_top_mid", "y": 180 }, "when": { "AND": [{ "facing": "south" }, { "book_type_1": "enchanted" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_writeable_slot_top_mid", "y": 180 }, "when": { "AND": [{ "facing": "south" }, { "book_type_1": "writeable" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_written_slot_top_mid", "y": 180 }, "when": { "AND": [{ "facing": "south" }, { "book_type_1": "written" }] } },
+
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_occupied_slot_top_right", "y": 180 }, "when": { "AND": [{ "facing": "south" }, { "book_type_2": "normal" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_empty_slot_top_right", "y": 180 }, "when": { "AND": [{ "facing": "south" }, { "book_type_2": "empty" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_top_right", "y": 180 }, "when": { "AND": [{ "facing": "south" }, { "book_type_2": "enchanted" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_writeable_slot_top_right", "y": 180 }, "when": { "AND": [{ "facing": "south" }, { "book_type_2": "writeable" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_written_slot_top_right", "y": 180 }, "when": { "AND": [{ "facing": "south" }, { "book_type_2": "written" }] } },
+
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_occupied_slot_bottom_left", "y": 180 }, "when": { "AND": [{ "facing": "south" }, { "book_type_3": "normal" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_empty_slot_bottom_left", "y": 180 }, "when": { "AND": [{ "facing": "south" }, { "book_type_3": "empty" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_bottom_left", "y": 180 }, "when": { "AND": [{ "facing": "south" }, { "book_type_3": "enchanted" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_writeable_slot_bottom_left", "y": 180 }, "when": { "AND": [{ "facing": "south" }, { "book_type_3": "writeable" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_written_slot_bottom_left", "y": 180 }, "when": { "AND": [{ "facing": "south" }, { "book_type_3": "written" }] } },
+
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_occupied_slot_bottom_mid", "y": 180 }, "when": { "AND": [{ "facing": "south" }, { "book_type_4": "normal" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_empty_slot_bottom_mid", "y": 180 }, "when": { "AND": [{ "facing": "south" }, { "book_type_4": "empty" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_bottom_mid", "y": 180 }, "when": { "AND": [{ "facing": "south" }, { "book_type_4": "enchanted" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_writeable_slot_bottom_mid", "y": 180 }, "when": { "AND": [{ "facing": "south" }, { "book_type_4": "writeable" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_written_slot_bottom_mid", "y": 180 }, "when": { "AND": [{ "facing": "south" }, { "book_type_4": "written" }] } },
+
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_occupied_slot_bottom_right", "y": 180 }, "when": { "AND": [{ "facing": "south" }, { "book_type_5": "normal" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_empty_slot_bottom_right", "y": 180 }, "when": { "AND": [{ "facing": "south" }, { "book_type_5": "empty" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_bottom_right", "y": 180 }, "when": { "AND": [{ "facing": "south" }, { "book_type_5": "enchanted" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_writeable_slot_bottom_right", "y": 180 }, "when": { "AND": [{ "facing": "south" }, { "book_type_5": "writeable" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_written_slot_bottom_right", "y": 180 }, "when": { "AND": [{ "facing": "south" }, { "book_type_5": "written" }] } },
+
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_occupied_slot_top_left", "y": 0 }, "when": { "AND": [{ "facing": "north" }, { "book_type_0": "normal" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_empty_slot_top_left", "y": 0 }, "when": { "AND": [{ "facing": "north" }, { "book_type_0": "empty" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_top_left", "y": 0 }, "when": { "AND": [{ "facing": "north" }, { "book_type_0": "enchanted" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_writeable_slot_top_left", "y": 0 }, "when": { "AND": [{ "facing": "north" }, { "book_type_0": "writeable" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_written_slot_top_left", "y": 0 }, "when": { "AND": [{ "facing": "north" }, { "book_type_0": "written" }] } },
+
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_occupied_slot_top_mid", "y": 0 }, "when": { "AND": [{ "facing": "north" }, { "book_type_1": "normal" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_empty_slot_top_mid", "y": 0 }, "when": { "AND": [{ "facing": "north" }, { "book_type_1": "empty" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_top_mid", "y": 0 }, "when": { "AND": [{ "facing": "north" }, { "book_type_1": "enchanted" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_writeable_slot_top_mid", "y": 0 }, "when": { "AND": [{ "facing": "north" }, { "book_type_1": "writeable" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_written_slot_top_mid", "y": 0 }, "when": { "AND": [{ "facing": "north" }, { "book_type_1": "written" }] } },
+
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_occupied_slot_top_right", "y": 0 }, "when": { "AND": [{ "facing": "north" }, { "book_type_2": "normal" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_empty_slot_top_right", "y": 0 }, "when": { "AND": [{ "facing": "north" }, { "book_type_2": "empty" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_top_right", "y": 0 }, "when": { "AND": [{ "facing": "north" }, { "book_type_2": "enchanted" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_writeable_slot_top_right", "y": 0 }, "when": { "AND": [{ "facing": "north" }, { "book_type_2": "writeable" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_written_slot_top_right", "y": 0 }, "when": { "AND": [{ "facing": "north" }, { "book_type_2": "written" }] } },
+
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_occupied_slot_bottom_left", "y": 0 }, "when": { "AND": [{ "facing": "north" }, { "book_type_3": "normal" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_empty_slot_bottom_left", "y": 0 }, "when": { "AND": [{ "facing": "north" }, { "book_type_3": "empty" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_bottom_left", "y": 0 }, "when": { "AND": [{ "facing": "north" }, { "book_type_3": "enchanted" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_writeable_slot_bottom_left", "y": 0 }, "when": { "AND": [{ "facing": "north" }, { "book_type_3": "writeable" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_written_slot_bottom_left", "y": 0 }, "when": { "AND": [{ "facing": "north" }, { "book_type_3": "written" }] } },
+
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_occupied_slot_bottom_mid", "y": 0 }, "when": { "AND": [{ "facing": "north" }, { "book_type_4": "normal" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_empty_slot_bottom_mid", "y": 0 }, "when": { "AND": [{ "facing": "north" }, { "book_type_4": "empty" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_bottom_mid", "y": 0 }, "when": { "AND": [{ "facing": "north" }, { "book_type_4": "enchanted" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_writeable_slot_bottom_mid", "y": 0 }, "when": { "AND": [{ "facing": "north" }, { "book_type_4": "writeable" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_written_slot_bottom_mid", "y": 0 }, "when": { "AND": [{ "facing": "north" }, { "book_type_4": "written" }] } },
+
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_occupied_slot_bottom_right", "y": 0 }, "when": { "AND": [{ "facing": "north" }, { "book_type_5": "normal" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_empty_slot_bottom_right", "y": 0 }, "when": { "AND": [{ "facing": "north" }, { "book_type_5": "empty" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_enchanted_slot_bottom_right", "y": 0 }, "when": { "AND": [{ "facing": "north" }, { "book_type_5": "enchanted" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_writeable_slot_bottom_right", "y": 0 }, "when": { "AND": [{ "facing": "north" }, { "book_type_5": "writeable" }] } },
+    { "apply": { "model": "minecraft:block/chiseled_bookshelf_written_slot_bottom_right", "y": 0 }, "when": { "AND": [{ "facing": "north" }, { "book_type_5": "written" }] } }
   ]
 }

@@ -1,8 +1,12 @@
 package com.butteredapples.mixin;
 
-import com.butteredapples.BookEnum;
-import com.butteredapples.ModProperties;
+import com.butteredapples.util.BookEnum;
+import com.butteredapples.util.ModProperties;
+import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
+import com.llamalad7.mixinextras.injector.v2.WrapWithCondition;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -11,111 +15,116 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ChiseledBookShelfBlock;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.entity.ChiseledBookShelfBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec2;
-import org.spongepowered.asm.mixin.Final;
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.Unique;
+import org.jetbrains.annotations.NotNull;
+import org.spongepowered.asm.mixin.*;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.ModifyArg;
+import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Consumer;
 
-@Mixin(value = ChiseledBookShelfBlock.class)
+@SuppressWarnings("deprecation")
+@Mixin(ChiseledBookShelfBlock.class)
 public abstract class CBMixin extends Block {
 
     @Shadow
-    @Final
-    public static List<BooleanProperty> SLOT_OCCUPIED_PROPERTIES;
-    @Unique
-    private static final List<EnumProperty<BookEnum>> BOOK_TYPE_PROPERTIES = List.of(
-            ModProperties.BOOK_TYPE_SLOT_0,
-            ModProperties.BOOK_TYPE_SLOT_1,
-            ModProperties.BOOK_TYPE_SLOT_2,
-            ModProperties.BOOK_TYPE_SLOT_3,
-            ModProperties.BOOK_TYPE_SLOT_4,
-            ModProperties.BOOK_TYPE_SLOT_5
-    );
+    private static Optional<Vec2> getRelativeHitCoordinatesForBlockFace(BlockHitResult blockHitResult, Direction direction) {
+        return null;
+    }
 
-    @ModifyArg(
-            method = "<init>",
-            at = @At(
-                    value = "INVOKE",
-                    target = "Lnet/minecraft/world/level/block/ChiseledBookShelfBlock;registerDefaultState(Lnet/minecraft/world/level/block/state/BlockState;)V"
-            )
-    )
-    private BlockState onRegisterDefaultState(BlockState par1) {
-        BlockState modified = par1;
-        for (EnumProperty<BookEnum> prop : BOOK_TYPE_PROPERTIES) {
-            modified = modified.setValue(prop, BookEnum.EMPTY);
-        }
-        this.registerDefaultState(modified);
-        return modified;
+    @Shadow
+    private static int getHitSlot(Vec2 vec2) {
+        return 0;
+    }
+
+    @Shadow
+    private static void removeBook(Level level, BlockPos blockPos, Player player, ChiseledBookShelfBlockEntity chiseledBookShelfBlockEntity, int i) {
+    }
+
+    @Shadow
+    private static void addBook(Level level, BlockPos blockPos, Player player, ChiseledBookShelfBlockEntity chiseledBookShelfBlockEntity, ItemStack itemStack, int i) {
+    }
+
+    @ModifyExpressionValue(method = "<init>", at = @At(value = "INVOKE", target = "Ljava/util/Iterator;hasNext()Z"))
+    private boolean dontAddVanillaPropertiesToDefaultState(boolean original) {
+        return false;
+    }
+
+    @ModifyVariable(method = "<init>", at = @At("STORE"))
+    private BlockState addCustomPropertiesToDefaultState(BlockState state) {
+        return state;
+    }
+
+    @WrapWithCondition(method = "createBlockStateDefinition", at = @At(value = "INVOKE", target = "Ljava/util/List;forEach(Ljava/util/function/Consumer;)V"))
+    private boolean dontAddVanillaProperties(List<?> instance, Consumer<?> consumer) {
+        return false;
+    }
+
+    @Inject(method = "createBlockStateDefinition", at = @At("TAIL"))
+    private void addCustomProperties(StateDefinition.Builder<Block, BlockState> builder, CallbackInfo ci) {
+        ModProperties.BOOK_TYPE_PROPERTIES.forEach(builder::add);
     }
 
     public CBMixin(Properties properties) {
         super(properties);
     }
 
-    @Inject(
-            method = "use",
-            at = @At(
-                    value = "INVOKE",
-                    target = "Lnet/minecraft/world/level/block/ChiseledBookShelfBlock;addBook(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/level/block/entity/ChiseledBookShelfBlockEntity;Lnet/minecraft/world/item/ItemStack;I)V",
-                    shift = At.Shift.AFTER
-            ),
-            locals = LocalCapture.CAPTURE_FAILHARD
-    )
-    private void onBookAdded(BlockState state, Level level, BlockPos pos, Player player,
-                             InteractionHand hand, BlockHitResult hit,
-                             CallbackInfoReturnable<InteractionResult> cir,
-                             ChiseledBookShelfBlockEntity chiseledBookShelfBlockEntity,
-                             Optional<Vec2> optional, int slot, ItemStack itemStack) {
 
-        if (level.isClientSide) return;
-        boolean isEnchanted = itemStack.is(Items.ENCHANTED_BOOK);
-        BlockState newState = state.setValue(BOOK_TYPE_PROPERTIES.get(slot),
-                isEnchanted ? BookEnum.ENCHANTED : BookEnum.NORMAL);
-        newState = newState.setValue(SLOT_OCCUPIED_PROPERTIES.get(slot), true);
-        level.setBlock(pos, newState, Block.UPDATE_ALL);
+    /**
+     *
+     * @author ButteredApples
+     * @reason Because the mod no longer uses vanilla slot properties anymore and uses an enum system instead,
+     *      The entire method needs to be Overridden to fix up all this.
+     */
+    @Overwrite
+    public @NotNull InteractionResult use(BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
+        if (level.getBlockEntity(blockPos) instanceof ChiseledBookShelfBlockEntity chiseledBookShelfBlockEntity) {
+            Optional<Vec2> optional = getRelativeHitCoordinatesForBlockFace(blockHitResult, blockState.getValue(HorizontalDirectionalBlock.FACING));
+            if (optional.isEmpty()) {
+                return InteractionResult.PASS;
+            } else {
+                int i = getHitSlot(optional.get());
+                BookEnum bookType = blockState.getValue(ModProperties.BOOK_TYPE_PROPERTIES.get(i));
+                if (bookType != BookEnum.EMPTY) {
+                    removeBook(level, blockPos, player, chiseledBookShelfBlockEntity, i);
+                    BlockState newState = blockState.setValue(
+                            ModProperties.BOOK_TYPE_PROPERTIES.get(i),
+                            BookEnum.EMPTY
+                    );
+                    level.setBlock(blockPos, newState, Block.UPDATE_ALL);
+                    return InteractionResult.sidedSuccess(level.isClientSide);
+                } else {
+                    ItemStack itemStack = player.getItemInHand(interactionHand);
+                    boolean isEnchanted = itemStack.is(Items.ENCHANTED_BOOK);
+                    boolean isWriteable = itemStack.is(Items.WRITABLE_BOOK);
+                    boolean isWritten = itemStack.is(Items.WRITABLE_BOOK);
+                    if (itemStack.is(ItemTags.BOOKSHELF_BOOKS)) {
+                        addBook(level, blockPos, player, chiseledBookShelfBlockEntity, itemStack, i);
+                        BlockState newState = blockState.setValue(
+                                ModProperties.BOOK_TYPE_PROPERTIES.get(i), isEnchanted ?
+                                        BookEnum.ENCHANTED : isWriteable ?
+                                        BookEnum.WRITABLE : isWritten ?
+                                        BookEnum.WRITTEN : BookEnum.NORMAL
+                        );
+                        level.setBlock(blockPos, newState, Block.UPDATE_ALL);
+                        return InteractionResult.sidedSuccess(level.isClientSide);
+                    } else {
+                        return InteractionResult.CONSUME;
+                    }
+                }
+            }
+        } else {
+            return InteractionResult.PASS;
+        }
     }
 
-    @Inject(
-            method = "use",
-            at = @At(
-                    value = "INVOKE",
-                    target = "Lnet/minecraft/world/level/block/ChiseledBookShelfBlock;removeBook(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/level/block/entity/ChiseledBookShelfBlockEntity;I)V",
-                    shift = At.Shift.AFTER
-            ),
-            locals = LocalCapture.CAPTURE_FAILHARD
-    )
-    private void onBookRemoved(BlockState state, Level level, BlockPos pos, Player player,
-                               InteractionHand hand, BlockHitResult hit,
-                               CallbackInfoReturnable<InteractionResult> cir,
-                               ChiseledBookShelfBlockEntity chiseledBookShelfBlockEntity,
-                               Optional<Vec2> optional, int slot) {
-
-        if (level.isClientSide) return;
-        BlockState newState = state
-                .setValue(BOOK_TYPE_PROPERTIES.get(slot), BookEnum.EMPTY)
-                .setValue(SLOT_OCCUPIED_PROPERTIES.get(slot), false);
-
-        level.setBlock(pos, newState, Block.UPDATE_ALL);
-    }
-
-    @Inject(method = "createBlockStateDefinition", at = @At("TAIL"))
-    private void addEnchantedProperties(StateDefinition.Builder<Block, BlockState> builder, CallbackInfo ci) {
-        BOOK_TYPE_PROPERTIES.forEach(builder::add);
-    }
 }

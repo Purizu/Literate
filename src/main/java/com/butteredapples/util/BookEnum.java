@@ -1,4 +1,4 @@
-package com.butteredapples;
+package com.butteredapples.util;
 
 import net.minecraft.util.StringRepresentable;
 import org.jetbrains.annotations.NotNull;
@@ -6,7 +6,9 @@ import org.jetbrains.annotations.NotNull;
 public enum BookEnum implements StringRepresentable {
     EMPTY("empty"),
     NORMAL("normal"),
-    ENCHANTED("enchanted");
+    ENCHANTED("enchanted"),
+    WRITABLE("writeable"),
+    WRITTEN("written");
 
     private final String name;
 

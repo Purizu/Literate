@@ -5,7 +5,8 @@ import net.fabricmc.api.ModInitializer;
 public class Literate implements ModInitializer {
 	public static final String MOD_ID = "literate";
 
-	@Override
+
+    @Override
 	public void onInitialize() {
 
 	}
