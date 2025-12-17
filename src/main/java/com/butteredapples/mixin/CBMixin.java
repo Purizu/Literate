@@ -106,7 +106,7 @@ public abstract class CBMixin extends Block {
                     ItemStack itemStack = player.getItemInHand(interactionHand);
                     boolean isEnchanted = itemStack.is(Items.ENCHANTED_BOOK);
                     boolean isWriteable = itemStack.is(Items.WRITABLE_BOOK);
-                    boolean isWritten = itemStack.is(Items.WRITABLE_BOOK);
+                    boolean isWritten = itemStack.is(Items.WRITTEN_BOOK);
                     if (itemStack.is(ItemTags.BOOKSHELF_BOOKS)) {
                         addBook(level, blockPos, player, chiseledBookShelfBlockEntity, itemStack, i);
                         BlockState newState = blockState.setValue(
