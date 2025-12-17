@@ -3,15 +3,14 @@
 	"id": "literate",
 	"version": "${version}",
 	"name": "Literate",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Makes book types visible in chiseled bookshelves.",
 	"authors": [
-		"Me!"
+		"ButteredApples"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+
 	},
-	"license": "CC0-1.0",
+	"license": "ARR",
 	"icon": "assets/literate/icon.png",
 	"environment": "*",
 	"entrypoints": {
